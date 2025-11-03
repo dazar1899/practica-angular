@@ -25,6 +25,18 @@ export class VehicleComponent implements OnInit {
     this.getVehicles();
   }
 
+  get totalRenault(): number {
+    return this.vehicles.filter(v => v.marca?.toLowerCase() === 'renault').length;
+  }
+
+  get totalChevrolet(): number {
+    return this.vehicles.filter(v => v.marca?.toLowerCase() === 'chevrolet').length;
+  }
+
+  get totalNissan(): number {
+    return this.vehicles.filter(v => v.marca?.toLowerCase() === 'nissan').length;
+  }
+
 }
 
 
